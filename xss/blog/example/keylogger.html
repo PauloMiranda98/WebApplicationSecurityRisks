@@ -1,0 +1,5 @@
+<script>
+  document.getElementById("search").addEventListener("keypress", function(e) {
+    alert("Você está sendo atacado com XSS e pressionou " + String.fromCharCode(e.keyCode));
+  });
+</script>

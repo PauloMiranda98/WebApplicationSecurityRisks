@@ -1,0 +1,21 @@
+<h1>Articles</h1>
+
+<% if @search.present? %>
+  <p>
+    <%= @articles.size %> artigos com nome <%= @search.html_safe %> foram encontrados!
+  </p>
+<% else %>
+  <p>
+    Nosso blog possui <%= @articles.size %> <%= @articles.size == 1 ? "artigo" : "artigos" %>!
+  </p>
+<% end %>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title, article %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Article", new_article_path %>

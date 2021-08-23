@@ -2,7 +2,7 @@
 
 <% if @search.present? %>
   <p>
-    <%= @articles.size %> artigos com nome <%= @search.html_safe %> foram encontrados!
+    <%= @articles.size %> artigos com nome "<%= @search.html_safe %>" foram encontrados!
   </p>
 <% else %>
   <p>
